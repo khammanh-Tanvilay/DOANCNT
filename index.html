@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khách sạn AnoKham</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff3e0;
+        }
+        header {
+            background-color: #e67e22;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .rooms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .room {
+            background-color: white;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+            border: 2px solid #e67e22;
+        }
+        .room img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .telegram-button {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .telegram-button i {
+            font-size: 20px;
+        }
+        .telegram-button:hover {
+            background-color: #d35400;
+        }
+        footer {
+            background-color: #e67e22;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+        df-messenger {
+            --df-messenger-bot-message: #71084f;
+            --df-messenger-button-titlebar-color: #d35400;
+            --df-messenger-chat-background-color: #ffffff;
+            --df-messenger-font-color: rgb(255, 249, 249);
+            --df-messenger-send-icon: #e67e22;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        /* Nút nổi Telegram */
+        .floating-telegram {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background-color: #0088cc;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .floating-telegram:hover {
+            background-color: #0077b5;
+        }
+        .floating-telegram i {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>Khách sạn AnoKham</header>
+    
+    <div class="container">
+        <h2 style="color: #d35400;">Phòng nghỉ của chúng tôi</h2>
+        <div class="rooms">
+            <div class="room">
+                <img src="https://vanangroup.com.vn/wp-content/uploads/2024/05/Phong-duon-Superior.webp" alt="Phòng Đơn">
+                <h3 style="color: #e67e22;"><i class="fa-solid fa-bed"></i> Phòng Đơn</h3>
+                <p>Giá: 550,000 VND/đêm</p>
+                <a href="https://t.me/AnoKhamHotelBookingBot" target="_blank" class="telegram-button">
+                    <i class="fa-brands fa-telegram"></i> Đặt phòng
+                </a>
+            </div>
+            <div class="room">
+                <img src="https://dyf.vn/wp-content/uploads/2021/10/phong-don-la-gi-tieu-chuan-cach-phan-loai-va-goi-ten_6172694cf3073.jpeg" alt="Phòng Đôi">
+                <h3 style="color: #e67e22;"><i class="fa-solid fa-bed"></i> Phòng Đôi</h3>
+                <p>Giá: 600,000 VND/đêm</p>
+                <a href="https://t.me/AnoKhamHotelBookingBot" target="_blank" class="telegram-button">
+                    <i class="fa-brands fa-telegram"></i> Đặt phòng
+                </a>
+            </div>
+            <div class="room">
+                <img src="https://www.vietnambooking.com/wp-content/uploads/2021/02/khach-san-ho-chi-minh-28.jpg" alt="Phòng VIP">
+                <h3 style="color: #e67e22;"><i class="fa-solid fa-crown"></i> Phòng VIP</h3>
+                <p>Giá: 990,000 VND/đêm</p>
+                <a href="https://t.me/AnoKhamHotelBookingBot" target="_blank" class="telegram-button">
+                    <i class="fa-brands fa-telegram"></i> Đặt phòng
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2025 Khách sạn AnoKham. All rights reserved.
+    </footer>
+    
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+        chat-title="AnoKham Hotel"
+        agent-id="ab5256c6-be23-42ab-8784-e4bd69a2c187"
+        language-code="en">
+    </df-messenger>
+
+    <!-- Nút nổi Telegram -->
+    <a href="https://t.me/AnoKhamHotelBookingBot" target="_blank" class="floating-telegram">
+        <i class="fa-brands fa-telegram"></i>
+    </a>
+</body>
+</html>
